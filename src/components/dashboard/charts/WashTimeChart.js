@@ -17,11 +17,19 @@ export default function WashTimeChart() {
 
   return (
     <Card title="Tempo de lavagem por funcionário" subtitle="Hoje vs. meta de 30 min (referência: média atual de 79,5 min)">
-      <ResponsiveContainer width="100%" height={280}>
-        <BarChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
+      <ResponsiveContainer width="100%" height={300} minWidth={280}>
+        <BarChart data={dados} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />
-          <XAxis dataKey="nome" {...axisSx} interval={0} angle={-30} textAnchor="end" height={50} />
-          <YAxis {...axisSx} width={40} unit=" min" />
+          <XAxis
+            dataKey="nome"
+            {...axisSx}
+            tick={{ fill: axisSx.tick.fill, fontSize: 10 }}
+            interval={0}
+            angle={-60}
+            textAnchor="end"
+            height={62}
+          />
+          <YAxis {...axisSx} width={36} unit=" min" />
           <Tooltip {...tooltipSx} formatter={(v, n, p) => [`${v} min`, p.payload.status]} />
           <ReferenceLine y={media} stroke="#6b6560" strokeDasharray="4 4" label={{ value: "média atual 79,5 min", fill: "#9a9a9a", fontSize: 10, position: "insideTopLeft" }} />
           <ReferenceLine y={meta} stroke="#e8748c" strokeDasharray="4 4" label={{ value: `meta ${meta} min`, fill: "#e8748c", fontSize: 10, position: "insideBottomLeft" }} />

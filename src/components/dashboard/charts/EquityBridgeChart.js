@@ -30,11 +30,19 @@ export default function EquityBridgeChart() {
 
   return (
     <Card title="Ponte Enterprise Value → Equity Value">
-      <ResponsiveContainer width="100%" height={280}>
-        <BarChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
+      <ResponsiveContainer width="100%" height={300} minWidth={260}>
+        <BarChart data={dados} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />
-          <XAxis dataKey="nome" {...axisSx} interval={0} angle={-15} textAnchor="end" height={55} />
-          <YAxis {...axisSx} tickFormatter={(v) => formatBRL(v)} width={80} />
+          <XAxis
+            dataKey="nome"
+            {...axisSx}
+            tick={{ fill: axisSx.tick.fill, fontSize: 10 }}
+            interval={0}
+            angle={-40}
+            textAnchor="end"
+            height={70}
+          />
+          <YAxis {...axisSx} tickFormatter={(v) => formatBRL(v)} width={72} />
           <Tooltip {...tooltipSx} formatter={(_, __, p) => [formatBRL(p.payload.real), p.payload.nome]} />
           <Bar dataKey="base" stackId="ponte" fill="transparent" />
           <Bar dataKey="valor" stackId="ponte" radius={[4, 4, 0, 0]} maxBarSize={56}>

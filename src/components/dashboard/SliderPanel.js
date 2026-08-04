@@ -19,7 +19,7 @@ const NOME_CARGO = {
 const pct = (v) => formatPercent(v);
 const brl = (v) => formatBRL(v);
 
-export default function SliderPanel() {
+export default function SliderPanel({ onClose }) {
   const { premissas, anoAtivacaoAuto, anoAtivacaoSlider, anoAtivacaoOverride, setAnoAtivacaoMaquina, setValor, setServicoMix, restaurar } =
     usePremissas();
 
@@ -29,8 +29,19 @@ export default function SliderPanel() {
 
   return (
     <div className="flex h-full flex-col">
-      <div className="flex items-center justify-between px-4 py-4">
-        <p className="text-xs font-medium uppercase tracking-widest text-ink-400">Premissas</p>
+      <div className="flex items-center justify-between gap-2 px-4 py-4">
+        <div className="flex items-center gap-2">
+          {onClose && (
+            <button
+              onClick={onClose}
+              aria-label="Fechar premissas"
+              className="-ml-1 rounded-md p-1 text-ink-400 hover:text-white lg:hidden"
+            >
+              ✕
+            </button>
+          )}
+          <p className="text-xs font-medium uppercase tracking-widest text-ink-400">Premissas</p>
+        </div>
         <button
           onClick={restaurar}
           className="text-[11px] font-medium text-wine-400 hover:text-wine-300"

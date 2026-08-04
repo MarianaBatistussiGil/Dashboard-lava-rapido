@@ -14,7 +14,7 @@ export default function KpiRow() {
   const deltaReceitaPerdida = ultimoAsIs.receitaPerdida - ultimoT1.receitaPerdida;
 
   return (
-    <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 xl:grid-cols-7">
+    <div className="grid grid-cols-2 gap-3 sm:gap-4 sm:[grid-template-columns:repeat(auto-fit,minmax(160px,1fr))]">
       <KpiCard label="Enterprise Value" value={formatBRL(valuation.ev.enterpriseValue)} delta={formatBRL(valuation.ev.enterpriseValue - valuation.evAsIs.enterpriseValue)} />
       <KpiCard label="Equity Value" value={formatBRL(valuation.eq)} delta={formatBRL(valuation.eq - valuation.eqAsIs)} />
       <KpiCard label="VPL do plano" value={formatBRL(decisao.total.vpl)} />
