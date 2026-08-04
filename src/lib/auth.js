@@ -5,8 +5,8 @@
 const SESSION_KEY = "nogueira-auth";
 
 export const CREDENCIAIS = {
-  usuario: "claudemir",
-  senha: "lavarapido",
+  usuario: "mariana",
+  senha: "1234",
 };
 
 export function validarCredenciais(usuario, senha) {
