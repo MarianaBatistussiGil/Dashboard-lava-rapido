@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
+import logoNogueira from "@/app/assets/image.png";
 import { estaAutenticado, sair } from "@/lib/auth";
 import { PremissasProvider } from "@/contexts/PremissasContext";
 import SliderPanel from "@/components/dashboard/SliderPanel";
@@ -17,6 +19,7 @@ import FcffChart from "@/components/dashboard/charts/FcffChart";
 import EquityBridgeChart from "@/components/dashboard/charts/EquityBridgeChart";
 import SensitivityTable from "@/components/dashboard/charts/SensitivityTable";
 import CashAccumulationChart from "@/components/dashboard/charts/CashAccumulationChart";
+import PlanilhaImportCard from "@/components/dashboard/PlanilhaImportCard";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -54,7 +57,9 @@ export default function DashboardPage() {
       <main className="min-h-screen bg-ink-950">
         <header className="flex items-center justify-between gap-3 border-b border-ink-800 px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
-            <span className="h-2.5 w-2.5 shrink-0 rounded-full bg-wine-500" />
+            <span className="inline-flex shrink-0 rounded-md bg-white p-1">
+              <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-6 w-auto" priority />
+            </span>
             <p className="truncate text-[11px] font-medium uppercase tracking-[0.15em] text-ink-400 sm:text-xs sm:tracking-[0.2em]">
               <span className="sm:hidden">Nogueira</span>
               <span className="hidden sm:inline">Nogueira · Valuation Suite</span>
@@ -98,6 +103,8 @@ export default function DashboardPage() {
           </aside>
 
           <div className="min-w-0 flex-1 space-y-4 p-4 sm:space-y-5 sm:p-6">
+            <PlanilhaImportCard />
+
             <KpiRow />
 
             <div className="grid grid-cols-1 gap-4 sm:gap-5 xl:grid-cols-2">

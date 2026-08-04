@@ -1,10 +1,15 @@
+import Image from "next/image";
+import logoNogueira from "@/app/assets/image.png";
+
 export default function Headline() {
   return (
     <div>
-      <div className="flex items-center gap-2.5">
-        <span className="h-3 w-3 rounded-full bg-wine-500" />
+      <div className="flex items-center gap-3">
+        <span className="inline-flex rounded-lg bg-white p-1.5 shadow-lg shadow-black/40">
+          <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-9 w-auto" priority />
+        </span>
         <span className="text-xs font-medium uppercase tracking-[0.28em] text-ink-500">
-          Nogueira · Valuation Suite
+          Valuation Suite
         </span>
       </div>
 

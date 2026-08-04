@@ -17,3 +17,9 @@ export function formatPercent(valor) {
 export function formatNumber(valor) {
   return new Intl.NumberFormat("pt-BR", { maximumFractionDigits: 0 }).format(valor ?? 0);
 }
+
+export function formatMultiplo(valor) {
+  return (
+    new Intl.NumberFormat("pt-BR", { minimumFractionDigits: 2, maximumFractionDigits: 2 }).format(valor ?? 0) + "x"
+  );
+}
