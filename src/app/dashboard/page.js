@@ -25,6 +25,7 @@ export default function DashboardPage() {
   const router = useRouter();
   const [pronto, setPronto] = useState(false);
   const [premissasAbertas, setPremissasAbertas] = useState(false);
+  const [planilhaImportada, setPlanilhaImportada] = useState(null);
 
   useEffect(() => {
     if (!estaAutenticado()) {
@@ -103,9 +104,13 @@ export default function DashboardPage() {
           </aside>
 
           <div className="min-w-0 flex-1 space-y-4 p-4 sm:space-y-5 sm:p-6">
-            <PlanilhaImportCard />
+            <PlanilhaImportCard
+              importado={planilhaImportada}
+              onImportar={(resultado, nomeArquivo) => setPlanilhaImportada({ resultado, nomeArquivo })}
+              onLimpar={() => setPlanilhaImportada(null)}
+            />
 
-            <KpiRow />
+            <KpiRow importado={planilhaImportada} />
 
             <div className="grid grid-cols-1 gap-4 sm:gap-5 xl:grid-cols-2">
               <div className="xl:col-span-2">

@@ -1,4 +1,4 @@
-export default function KpiCard({ label, value, delta, deltaLabel }) {
+export default function KpiCard({ label, value, delta, deltaLabel, nota }) {
   const positivo = delta != null && delta >= 0;
   return (
     <div className="min-w-0 rounded-2xl border border-ink-800 bg-ink-900/60 p-3.5 sm:p-5">
@@ -11,6 +11,7 @@ export default function KpiCard({ label, value, delta, deltaLabel }) {
           {positivo ? "↑" : "↓"} {delta} <span className="text-ink-600">{deltaLabel ?? "vs. As-Is"}</span>
         </p>
       )}
+      {nota && <p className="mt-1 truncate text-[10px] text-ink-600 sm:mt-1.5">{nota}</p>}
     </div>
   );
 }

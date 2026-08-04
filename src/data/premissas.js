@@ -195,7 +195,7 @@ export const premissasBase = {
         nome: "Essencial",
         lavagensPorMes: 2,
         tipo: "só máquina (externa)",
-        preco: { valor: 70, unidade: "R$/mês", fonte: "real" },
+        preco: { valor: 70, min: 40, max: 110, unidade: "R$/mês", fonte: "real" },
         penetracao: { valor: 0.05, min: 0, max: 0.5, unidade: "% da base", fonte: "estimado" },
       },
       {
@@ -203,7 +203,7 @@ export const premissasBase = {
         nome: "Premium",
         lavagensPorMes: 2,
         tipo: "máquina ou manual + interna",
-        preco: { valor: 120, unidade: "R$/mês", fonte: "real" },
+        preco: { valor: 120, min: 70, max: 180, unidade: "R$/mês", fonte: "real" },
         penetracao: { valor: 0.08, min: 0, max: 0.5, unidade: "% da base", fonte: "estimado" },
       },
       {
@@ -211,7 +211,7 @@ export const premissasBase = {
         nome: "Premium Plus",
         lavagensPorMes: 4,
         tipo: "máquina ou manual + interna + cera",
-        preco: { valor: 180, unidade: "R$/mês", fonte: "real" },
+        preco: { valor: 180, min: 110, max: 260, unidade: "R$/mês", fonte: "real" },
         penetracao: { valor: 0.04, min: 0, max: 0.5, unidade: "% da base", fonte: "estimado" },
       },
     ],

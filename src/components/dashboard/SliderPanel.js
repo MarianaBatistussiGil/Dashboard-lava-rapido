@@ -83,8 +83,8 @@ export default function SliderPanel({ onClose }) {
               <Slider
                 label="Preço"
                 value={plano.preco.valor}
-                min={plano.preco.min ?? plano.preco.valor * 0.5}
-                max={plano.preco.max ?? plano.preco.valor * 2}
+                min={plano.preco.min}
+                max={plano.preco.max}
                 format={brl}
                 onChange={(v) => setValor(["assinaturas", "planos", i, "preco"], v)}
               />
