@@ -7,6 +7,18 @@ html {
 }
 
 body {
-  background-color: #05070a;
-  color: #e6e9ee;
+  background-color: #050505;
+  color: #f2f0f1;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+}
+
+::selection {
+  background-color: #6e1a33;
+  color: #fbeaee;
+}
+
+input:-webkit-autofill {
+  -webkit-text-fill-color: #f2f0f1;
+  -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset;
+  transition: background-color 9999s ease-in-out 0s;
 }
