@@ -73,7 +73,7 @@ export const premissasBase = {
     boxesManuais: {
       asIs: { valor: 2, unidade: "boxes", fonte: "real" },
       t0: { valor: 2, unidade: "boxes", fonte: "real" },
-      t1: { valor: 6, unidade: "boxes", fonte: "real" },
+      t1: { valor: 6, min: 4, max: 8, unidade: "boxes", fonte: "real" },
     },
   },
 
@@ -237,15 +237,50 @@ export const premissasBase = {
   // histórico de tempos, então o "formal" aqui é a diferenciação de função dentro de
   // uma equipe pequena, não uma camada extra de salários de gestão de mercado.
   // Encargos em 20% supõe enquadramento Simples Nacional (bem abaixo do CLT cheio).
+  // qtd e salario viram sliders (min/max); encargos fica fixo (não pedido como slider).
   equipe: {
-    proprietario: { qtd: 1, salario: 1000, encargos: 0.0 },
-    gerente: { qtd: 1, salario: 1500, encargos: 0.15 },
-    subgerente: { qtd: 1, salario: 1300, encargos: 0.15 },
-    auxAdministrativo: { qtd: 1, salario: 1100, encargos: 0.15 },
-    atendente: { qtd: 1, salario: 1100, encargos: 0.15 },
-    lavador: { qtd: 6, salario: 1200, encargos: 0.15 },
-    operadorMaquina: { qtd: 1, salario: 1600, encargos: 0.15, disponivelEm: "T1" },
-    contador: { qtd: 1, salario: 300, encargos: 0.0, tipo: "terceirizado" },
+    proprietario: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1000, min: 500, max: 3000, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.0,
+    },
+    gerente: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1500, min: 800, max: 4000, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+    },
+    subgerente: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1300, min: 800, max: 3500, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+    },
+    auxAdministrativo: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1100, min: 700, max: 3000, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+    },
+    atendente: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1100, min: 700, max: 3000, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+    },
+    lavador: {
+      qtd: { valor: 6, min: 2, max: 10, unidade: "pessoas", fonte: "real (organograma)" },
+      salario: { valor: 1200, min: 700, max: 2500, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+    },
+    operadorMaquina: {
+      qtd: { valor: 1, min: 1, max: 2, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 1600, min: 900, max: 3500, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.15,
+      disponivelEm: "T1",
+    },
+    contador: {
+      qtd: { valor: 1, min: 1, max: 1, unidade: "pessoa", fonte: "estimado" },
+      salario: { valor: 300, min: 200, max: 1500, unidade: "R$/mês", fonte: "estimado" },
+      encargos: 0.0,
+      tipo: "terceirizado",
+    },
   },
 
   custos: {
