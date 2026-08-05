@@ -35,14 +35,14 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
           {importado && (
             <button
               onClick={onLimpar}
-              className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-wine-500 hover:text-white"
+              className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-blue-500 hover:text-white"
             >
               Usar modelo interativo
             </button>
           )}
           <button
             onClick={() => inputRef.current?.click()}
-            className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-wine-500 hover:text-white"
+            className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-blue-500 hover:text-white"
           >
             {importado ? "Trocar planilha" : "Escolher planilha (.xlsx)"}
           </button>
@@ -54,7 +54,7 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
       {!importado && !carregando && <p className="text-sm text-ink-500">Nenhuma planilha carregada — os KPIs abaixo são os do modelo interativo.</p>}
       {importado && <p className="text-sm text-ink-400">Arquivo carregado: <span className="text-ink-200">{importado.nomeArquivo}</span></p>}
       {carregando && <p className="text-sm text-ink-400">Lendo planilha…</p>}
-      {erro && <p className="text-sm text-wine-300">{erro}</p>}
+      {erro && <p className="text-sm text-blue-300">{erro}</p>}
     </Card>
   );
 }

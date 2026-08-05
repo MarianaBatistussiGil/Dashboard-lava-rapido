@@ -13,7 +13,7 @@ export default function Headline() {
         </span>
       </div>
 
-      <span className="mt-10 inline-flex items-center rounded-full border border-wine-800 bg-wine-950 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-wine-200">
+      <span className="mt-10 inline-flex items-center rounded-full border border-blue-800 bg-blue-950 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-blue-200">
         Modelo de DCF interativo
       </span>
 

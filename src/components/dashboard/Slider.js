@@ -16,7 +16,7 @@ export default function Slider({ label, value, min, max, step, unidade, format, 
         value={value}
         disabled={disabled}
         onChange={(e) => onChange(Number(e.target.value))}
-        className="mt-1.5 h-1 w-full cursor-pointer appearance-none rounded-full bg-ink-700 accent-wine-500 disabled:cursor-not-allowed"
+        className="mt-1.5 h-1 w-full cursor-pointer appearance-none rounded-full bg-ink-700 accent-blue-500 disabled:cursor-not-allowed"
       />
     </div>
   );

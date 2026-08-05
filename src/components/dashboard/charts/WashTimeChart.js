@@ -32,8 +32,8 @@ export default function WashTimeChart() {
           <YAxis {...axisSx} width={36} unit=" min" />
           <Tooltip {...tooltipSx} formatter={(v, n, p) => [`${v} min`, p.payload.status]} />
           <ReferenceLine y={media} stroke="#6b6560" strokeDasharray="4 4" label={{ value: "média atual 79,5 min", fill: "#9a9a9a", fontSize: 10, position: "insideTopLeft" }} />
-          <ReferenceLine y={meta} stroke="#e8748c" strokeDasharray="4 4" label={{ value: `meta ${meta} min`, fill: "#e8748c", fontSize: 10, position: "insideBottomLeft" }} />
-          <Bar dataKey="minutos" fill="#af3f57" maxBarSize={24} radius={[4, 4, 0, 0]} />
+          <ReferenceLine y={meta} stroke="#4aa2ee" strokeDasharray="4 4" label={{ value: `meta ${meta} min`, fill: "#4aa2ee", fontSize: 10, position: "insideBottomLeft" }} />
+          <Bar dataKey="minutos" fill="#1663c2" maxBarSize={24} radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </Card>

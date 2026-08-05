@@ -7,7 +7,7 @@ export default function KpiCard({ label, value, delta, deltaLabel, nota }) {
         {value}
       </p>
       {delta != null && (
-        <p className={`mt-1 leading-snug sm:mt-1.5 text-[11px] font-medium sm:text-[12px] ${positivo ? "text-ink-300" : "text-wine-400"}`}>
+        <p className={`mt-1 leading-snug sm:mt-1.5 text-[11px] font-medium sm:text-[12px] ${positivo ? "text-ink-300" : "text-blue-400"}`}>
           {positivo ? "↑" : "↓"} {delta} <span className="text-ink-600">{deltaLabel ?? "vs. As-Is"}</span>
         </p>
       )}
