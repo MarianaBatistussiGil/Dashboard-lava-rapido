@@ -12,7 +12,7 @@ export default function SliderSection({ title, defaultOpen = false, children }) 
         className="flex w-full items-center justify-between py-3.5 text-left text-[11px] font-medium uppercase tracking-widest text-ink-300 hover:text-white"
       >
         {title}
-        <span className="text-base leading-none text-ink-600">{open ? "−" : "+"}</span>
+        <span className="text-base leading-none text-ink-400">{open ? "−" : "+"}</span>
       </button>
       {open && <div className="space-y-4 pb-5">{children}</div>}
     </div>

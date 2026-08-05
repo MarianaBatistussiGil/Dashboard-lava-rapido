@@ -51,7 +51,7 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
     >
       <input ref={inputRef} type="file" accept=".xlsx,.xls" className="hidden" onChange={handleArquivo} />
 
-      {!importado && !carregando && <p className="text-sm text-ink-500">Nenhuma planilha carregada — os KPIs abaixo são os do modelo interativo.</p>}
+      {!importado && !carregando && <p className="text-sm text-ink-300">Nenhuma planilha carregada — os KPIs abaixo são os do modelo interativo.</p>}
       {importado && <p className="text-sm text-ink-400">Arquivo carregado: <span className="text-ink-200">{importado.nomeArquivo}</span></p>}
       {carregando && <p className="text-sm text-ink-400">Lendo planilha…</p>}
       {erro && <p className="text-sm text-blue-300">{erro}</p>}

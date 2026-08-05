@@ -31,11 +31,11 @@ export default function FcffChart() {
       </ResponsiveContainer>
       <div className="mt-4 flex items-center justify-between rounded-lg border border-ink-800 bg-black/30 px-4 py-3">
         <div>
-          <p className="text-[11px] uppercase tracking-wider text-ink-500">Valor terminal (descontado)</p>
+          <p className="text-[11px] uppercase tracking-wider text-ink-300">Valor terminal (descontado)</p>
           <p className="mt-0.5 text-sm font-medium text-white">{formatBRL(valuation.ev.valorTerminalDescontado)}</p>
         </div>
         <div className="text-right">
-          <p className="text-[11px] uppercase tracking-wider text-ink-500">Soma FCFF descontados</p>
+          <p className="text-[11px] uppercase tracking-wider text-ink-300">Soma FCFF descontados</p>
           <p className="mt-0.5 text-sm font-medium text-white">
             {formatBRL(valuation.ev.enterpriseValue - valuation.ev.valorTerminalDescontado)}
           </p>

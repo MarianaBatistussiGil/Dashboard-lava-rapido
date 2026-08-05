@@ -37,7 +37,7 @@ export default function CapacityUtilizationChart() {
     <Card title="Ocupação da capacidade e receita perdida" subtitle="A prova visual do ganho da padronização de tempo e da máquina">
       <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
         <div>
-          <p className="mb-1 text-[11px] uppercase tracking-wider text-ink-500">Ocupação da capacidade</p>
+          <p className="mb-1 text-[11px] uppercase tracking-wider text-ink-300">Ocupação da capacidade</p>
           <ResponsiveContainer width="100%" height={240}>
             <BarChart data={ocupacao} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
               <CartesianGrid stroke={GRID_COR} vertical={false} />
@@ -52,7 +52,7 @@ export default function CapacityUtilizationChart() {
           </ResponsiveContainer>
         </div>
         <div>
-          <p className="mb-1 text-[11px] uppercase tracking-wider text-ink-500">Receita perdida</p>
+          <p className="mb-1 text-[11px] uppercase tracking-wider text-ink-300">Receita perdida</p>
           <ResponsiveContainer width="100%" height={240}>
             <LineChart data={perdida} margin={{ top: 4, right: 8, left: 0, bottom: 0 }}>
               <CartesianGrid stroke={GRID_COR} vertical={false} />

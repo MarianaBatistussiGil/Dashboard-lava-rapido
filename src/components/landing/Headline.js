@@ -8,7 +8,7 @@ export default function Headline() {
         <span className="inline-flex rounded-lg bg-white p-1.5 shadow-lg shadow-black/40">
           <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-9 w-auto" priority />
         </span>
-        <span className="text-xs font-medium uppercase tracking-[0.28em] text-ink-500">
+        <span className="text-xs font-medium uppercase tracking-[0.28em] text-ink-300">
           Valuation Suite
         </span>
       </div>
@@ -23,13 +23,13 @@ export default function Headline() {
         Lava-Rápido Nogueira
       </h1>
 
-      <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-500">
+      <p className="mt-6 max-w-md text-[15px] leading-relaxed text-ink-300">
         Um modelo de DCF vivo para o Lava-Rápido Nogueira. Ajuste WACC, crescimento e
         perpetuidade — e veja o Equity Value responder em tempo real, cenário a
         cenário, do balde ao Enterprise Value.
       </p>
 
-      <p className="mt-16 text-[11px] font-medium uppercase tracking-[0.2em] text-ink-600">
+      <p className="mt-16 text-[11px] font-medium uppercase tracking-[0.2em] text-ink-400">
         Base 2025 · Projeção 2026–2035
       </p>
     </div>

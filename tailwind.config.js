@@ -4,14 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // preto quase puro, para o fundo e superfícies elevadas
+        // preto quase puro (900-950) para fundo/superfícies, cinza claro (50-400)
+        // para texto legível sobre esse fundo. 500-700 seguem escuros de propósito —
+        // são usados só em borda/hover discreto, nunca em texto de leitura.
         ink: {
-          950: "#050505",
-          900: "#0a0a0a",
-          800: "#121212",
-          700: "#1a1a1a",
-          600: "#262626",
+          50: "#f7f7f6",
+          100: "#eae9e7",
+          200: "#d6d4d1",
+          300: "#b0aeaa",
+          400: "#8f8d89",
           500: "#3a3a3a",
+          600: "#262626",
+          700: "#1a1a1a",
+          800: "#121212",
+          900: "#0a0a0a",
+          950: "#050505",
         },
         // azul — cor de destaque única (CTA, foco, marca), extraída da logo real
         // (src/app/assets/image.png): navy predominante ~#003282, destaque vívido

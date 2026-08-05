@@ -23,7 +23,7 @@ export default function SensitivityTable() {
         <table className="w-full border-collapse text-[12px]">
           <thead>
             <tr>
-              <th className="p-2 text-left text-[11px] font-medium uppercase tracking-wider text-ink-500">WACC \ g</th>
+              <th className="p-2 text-left text-[11px] font-medium uppercase tracking-wider text-ink-300">WACC \ g</th>
               {gs.map((g) => (
                 <th key={g} className="p-2 text-right text-[11px] font-medium text-ink-400">
                   {formatPercent(g)}

@@ -17,7 +17,7 @@ const FORMATADORES = {
 function KpiRowImportado({ importado }) {
   return (
     <div>
-      <p className="mb-2 text-[11px] text-ink-500">
+      <p className="mb-2 text-[11px] text-ink-300">
         Mostrando dados importados de <span className="text-ink-300">"{importado.nomeArquivo}"</span> — os sliders
         continuam ativos, mas não alimentam esses cards enquanto uma planilha estiver carregada.
       </p>

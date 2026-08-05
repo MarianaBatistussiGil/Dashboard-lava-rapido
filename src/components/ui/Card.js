@@ -5,7 +5,7 @@ export default function Card({ title, subtitle, action, children, className = ""
         <div className="mb-4 flex items-start justify-between gap-3">
           <div className="min-w-0">
             {title && <h3 className="text-sm font-medium text-white">{title}</h3>}
-            {subtitle && <p className="mt-0.5 text-xs text-ink-500">{subtitle}</p>}
+            {subtitle && <p className="mt-0.5 text-xs text-ink-300">{subtitle}</p>}
           </div>
           {action}
         </div>

@@ -52,7 +52,7 @@ export default function EquityBridgeChart() {
           </Bar>
         </BarChart>
       </ResponsiveContainer>
-      <div className="mt-3 flex gap-4 text-[11px] text-ink-500">
+      <div className="mt-3 flex gap-4 text-[11px] text-ink-300">
         <span className="flex items-center gap-1.5">
           <span className="h-2 w-2 rounded-full" style={{ background: COR.entrada }} /> soma
         </span>
