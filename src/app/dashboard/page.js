@@ -58,9 +58,7 @@ export default function DashboardPage() {
       <main className="min-h-screen bg-ink-950">
         <header className="flex items-center justify-between gap-3 border-b border-ink-800 px-4 py-3 sm:px-6 sm:py-4">
           <div className="flex min-w-0 items-center gap-2.5 sm:gap-3">
-            <span className="inline-flex shrink-0 rounded-md bg-white p-1">
-              <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-6 w-auto" priority />
-            </span>
+            <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-11 w-auto shrink-0" priority />
             <p className="truncate text-[11px] font-medium uppercase tracking-[0.15em] text-ink-400 sm:text-xs sm:tracking-[0.2em]">
               <span className="sm:hidden">Nogueira</span>
               <span className="hidden sm:inline">Nogueira · Valuation Suite</span>

@@ -7,7 +7,7 @@ import { formatBRL } from "@/lib/format";
 import Card from "@/components/ui/Card";
 import { GRID_COR, axisSx, tooltipSx } from "@/lib/chartTheme";
 
-const COR = { entrada: "#4aa2ee", saida: "#072452", subtotal: "#f2f0f1" };
+const COR = { entrada: "#e8748c", saida: "#57132a", subtotal: "#f2f0f1" };
 
 export default function EquityBridgeChart() {
   const { valuation, valores } = usePremissas();

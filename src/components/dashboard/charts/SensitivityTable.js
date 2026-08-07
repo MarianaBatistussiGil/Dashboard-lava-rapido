@@ -41,7 +41,7 @@ export default function SensitivityTable() {
                     <td
                       key={j}
                       className="whitespace-nowrap p-2 text-right font-medium"
-                      style={{ background: corSequencial(t), color: t > 0.55 ? "#eef6fe" : "#041331" }}
+                      style={{ background: corSequencial(t), color: t > 0.55 ? "#fbeaee" : "#1a050c" }}
                     >
                       {formatBRL(valor)}
                     </td>

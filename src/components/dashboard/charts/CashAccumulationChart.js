@@ -31,8 +31,8 @@ export default function CashAccumulationChart() {
           {anoAtivacaoMaquina != null && (
             <ReferenceLine x={anoAtivacaoMaquina} stroke="#3a3a3a" strokeDasharray="3 3" label={{ value: "ativação", fill: "#6b6560", fontSize: 10, position: "top" }} />
           )}
-          {paybackPonto && <ReferenceDot x={paybackPonto.ano} y={paybackPonto.caixa} r={5} fill="#4aa2ee" stroke="#0a0a0a" strokeWidth={2} label={{ value: "payback", fill: "#4aa2ee", fontSize: 10, position: "top" }} />}
-          <Line type="monotone" dataKey="caixa" stroke="#4aa2ee" strokeWidth={2} dot={false} />
+          {paybackPonto && <ReferenceDot x={paybackPonto.ano} y={paybackPonto.caixa} r={5} fill="#e8748c" stroke="#0a0a0a" strokeWidth={2} label={{ value: "payback", fill: "#e8748c", fontSize: 10, position: "top" }} />}
+          <Line type="monotone" dataKey="caixa" stroke="#e8748c" strokeWidth={2} dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </Card>

@@ -29,8 +29,8 @@ export default function SubscriptionVsOneOffChart() {
           <YAxis {...axisSx} tickFormatter={(v) => formatBRL(v)} width={80} />
           <Tooltip {...tooltipSx} formatter={(v) => formatBRL(v)} />
           <Legend {...legendSx} />
-          <Bar dataKey="Avulso" stackId="receita" fill="#1663c2" maxBarSize={24} />
-          <Bar dataKey="Assinatura" stackId="receita" fill="#4aa2ee" maxBarSize={24} radius={[4, 4, 0, 0]} />
+          <Bar dataKey="Avulso" stackId="receita" fill="#af3f57" maxBarSize={24} />
+          <Bar dataKey="Assinatura" stackId="receita" fill="#e8748c" maxBarSize={24} radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
     </Card>

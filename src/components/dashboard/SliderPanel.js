@@ -44,7 +44,7 @@ export default function SliderPanel({ onClose }) {
         </div>
         <button
           onClick={restaurar}
-          className="text-[11px] font-medium text-blue-400 hover:text-blue-300"
+          className="text-[11px] font-medium text-wine-400 hover:text-wine-300"
         >
           Restaurar
         </button>
@@ -258,7 +258,7 @@ export default function SliderPanel({ onClose }) {
               <button
                 onClick={() => setAnoAtivacaoMaquina(null)}
                 className={`text-[10px] uppercase tracking-wide ${
-                  anoAtivacaoOverride == null ? "text-ink-700" : "text-blue-400 hover:text-blue-300"
+                  anoAtivacaoOverride == null ? "text-ink-700" : "text-wine-400 hover:text-wine-300"
                 }`}
                 disabled={anoAtivacaoOverride == null}
               >
@@ -275,7 +275,7 @@ export default function SliderPanel({ onClose }) {
               onChange={(v) => setAnoAtivacaoMaquina(v)}
             />
             {anoAtivacaoOverride == null && anoAtivacaoAuto == null && (
-              <p className="mt-1.5 text-[11px] text-blue-400">
+              <p className="mt-1.5 text-[11px] text-wine-400">
                 Caixa não cobre o capex dentro do horizonte — T1 fica igual a T0 até
                 aqui. Arraste para forçar uma ativação (ex.: financiada).
               </p>
@@ -373,7 +373,7 @@ export default function SliderPanel({ onClose }) {
               type="checkbox"
               checked={premissas.expansao.habilitada.valor}
               onChange={(e) => setValor(["expansao", "habilitada"], e.target.checked)}
-              className="h-3.5 w-3.5 accent-blue-500"
+              className="h-3.5 w-3.5 accent-wine-500"
             />
             Habilitar expansão
           </label>

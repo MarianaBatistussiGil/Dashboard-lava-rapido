@@ -20,21 +20,21 @@ module.exports = {
           900: "#0a0a0a",
           950: "#050505",
         },
-        // azul — cor de destaque única (CTA, foco, marca), extraída da logo real
-        // (src/app/assets/image.png): navy predominante ~#003282, destaque vívido
-        // ~#46aaf0. blue-400 e blue-800 abaixo batem quase exato com essas duas.
-        blue: {
-          50: "#eef6fe",
-          100: "#d7ecfd",
-          200: "#aed7fb",
-          300: "#7cbdf5",
-          400: "#4aa2ee",
-          500: "#2b82dd",
-          600: "#1663c2",
-          700: "#0d489a",
-          800: "#0a3576",
-          900: "#072452",
-          950: "#041331",
+        // vinho — cor de destaque única (CTA, foco, marca). Voltou a ser vermelho a
+        // pedido do usuário; a logo em src/app/assets/image.png é azul mas o
+        // destaque da UI não precisa seguir a logo.
+        wine: {
+          50: "#fbeaee",
+          100: "#f3ccd5",
+          200: "#e59bab",
+          300: "#d16b83",
+          400: "#af3f57",
+          500: "#8a2540",
+          600: "#6e1a33",
+          700: "#57132a",
+          800: "#400e1f",
+          900: "#2c0916",
+          950: "#1a050c",
         },
       },
       fontFamily: {

@@ -4,16 +4,14 @@ import logoNogueira from "@/app/assets/image.png";
 export default function Headline() {
   return (
     <div>
-      <div className="flex items-center gap-3">
-        <span className="inline-flex rounded-lg bg-white p-1.5 shadow-lg shadow-black/40">
-          <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-9 w-auto" priority />
-        </span>
+      <div className="flex items-center gap-4">
+        <Image src={logoNogueira} alt="Lava-Rápido Nogueira" className="h-16 w-auto" priority />
         <span className="text-xs font-medium uppercase tracking-[0.28em] text-ink-300">
           Valuation Suite
         </span>
       </div>
 
-      <span className="mt-10 inline-flex items-center rounded-full border border-blue-800 bg-blue-950 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-blue-200">
+      <span className="mt-10 inline-flex items-center rounded-full border border-wine-800 bg-wine-950 px-3 py-1 text-[11px] font-medium uppercase tracking-widest text-wine-200">
         Modelo de DCF interativo
       </span>
 

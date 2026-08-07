@@ -6,11 +6,11 @@ export default function Home() {
     <main className="relative grid min-h-screen grid-cols-1 overflow-hidden lg:grid-cols-2">
       <div
         aria-hidden
-        className="pointer-events-none absolute -left-40 top-1/3 h-[36rem] w-[36rem] rounded-full bg-blue-900/30 blur-[140px]"
+        className="pointer-events-none absolute -left-40 top-1/3 h-[36rem] w-[36rem] rounded-full bg-wine-900/30 blur-[140px]"
       />
       <div
         aria-hidden
-        className="pointer-events-none absolute -right-32 bottom-0 h-[28rem] w-[28rem] rounded-full bg-blue-950/50 blur-[120px]"
+        className="pointer-events-none absolute -right-32 bottom-0 h-[28rem] w-[28rem] rounded-full bg-wine-950/50 blur-[120px]"
       />
 
       <section className="relative flex items-center justify-center border-b border-ink-800 px-6 py-14 sm:px-8 sm:py-20 lg:border-b-0 lg:border-r lg:px-20">

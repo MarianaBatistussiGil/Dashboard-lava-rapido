@@ -42,7 +42,7 @@ export default function LoginCard() {
               value={usuario}
               onChange={(e) => setUsuario(e.target.value)}
               autoComplete="username"
-              className="mt-1.5 w-full rounded-lg border border-ink-600 bg-ink-950 px-3 py-2.5 text-sm text-white outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="mt-1.5 w-full rounded-lg border border-ink-600 bg-ink-950 px-3 py-2.5 text-sm text-white outline-none transition focus:border-wine-500 focus:ring-1 focus:ring-wine-500"
             />
           </div>
           <div>
@@ -55,15 +55,15 @@ export default function LoginCard() {
               value={senha}
               onChange={(e) => setSenha(e.target.value)}
               autoComplete="current-password"
-              className="mt-1.5 w-full rounded-lg border border-ink-600 bg-ink-950 px-3 py-2.5 text-sm text-white outline-none transition focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
+              className="mt-1.5 w-full rounded-lg border border-ink-600 bg-ink-950 px-3 py-2.5 text-sm text-white outline-none transition focus:border-wine-500 focus:ring-1 focus:ring-wine-500"
             />
           </div>
 
-          {erro && <p className="text-[13px] text-blue-300">{erro}</p>}
+          {erro && <p className="text-[13px] text-wine-300">{erro}</p>}
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-blue-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-blue-500 active:bg-blue-700"
+            className="w-full rounded-lg bg-wine-600 px-4 py-2.5 text-sm font-medium text-white transition hover:bg-wine-500 active:bg-wine-700"
           >
             Entrar
           </button>

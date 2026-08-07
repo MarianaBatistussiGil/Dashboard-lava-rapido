@@ -21,13 +21,12 @@ Vercel.
   converte a árvore de premissas (com metadados) em números puros para o resto de
   `dcf.js` consumir — por isso qualquer campo novo em `premissas.js` já wrapado em
   `{ valor, ... }` funciona automaticamente em todo o motor, sem tocar em `dcf.js`.
-- **Paleta da marca**: azul + preto + branco, só isso (ver `tailwind.config.js` →
-  `ink.*` e `blue.*`, e `src/lib/chartTheme.js` para a aplicação em gráficos). O azul
-  foi extraído por amostragem de pixel da logo real em `src/app/assets/image.png`
-  (navy predominante ~#003282, destaque vívido ~#46aaf0 — batem quase exato com
-  `blue-800`/`blue-400`). É uma decisão de produto explícita do usuário — não
-  introduzir outras cores de destaque. (Era vermelho-vinho até a troca pedida pelo
-  usuário depois que a logo real apareceu no projeto.)
+- **Paleta da marca**: vermelho vinho + preto + branco, só isso (ver
+  `tailwind.config.js` → `ink.*` e `wine.*`, e `src/lib/chartTheme.js` para a
+  aplicação em gráficos). É uma decisão de produto explícita do usuário — não
+  introduzir outras cores de destaque. (O projeto passou brevemente por uma paleta
+  azul extraída da logo real em `src/app/assets/image.png`, mas o usuário pediu para
+  voltar a vermelho-vinho; a logo em si continua azul, é só uma imagem.)
 - **Cenários** (`asIs` / `t0` / `t1`) são um campo `fase` calculado por ano dentro de
   `projetarAno`, não uma ramificação de lógica separada. Ver comentário no topo de
   `dcf.js`.
@@ -42,7 +41,7 @@ As três etapas do plano original foram implementadas:
 1. **Motor + dados** — `premissas.js` e `dcf.js` completos; defaults `estimado`
    calibrados manualmente (via script de sanity-check descartável, não commitado)
    para que EBITDA/caixa tenham uma trajetória plausível ao longo de 2026–2035.
-2. **Landing + login** — paleta premium azul/preto/branco, `LoginCard` e `Headline`
+2. **Landing + login** — paleta premium vinho/preto/branco, `LoginCard` e `Headline`
    client-only, guard de autenticação em `/dashboard`.
 3. **Dashboard** — `PremissasProvider` + `usePremissas()`, `SliderPanel` com 8 seções
    colapsáveis (Portfólio, Assinaturas, Operacional, Equipe, Custos, Máquina,

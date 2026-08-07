@@ -13,8 +13,8 @@ body {
 }
 
 ::selection {
-  background-color: #1663c2;
-  color: #eef6fe;
+  background-color: #6e1a33;
+  color: #fbeaee;
 }
 
 input:-webkit-autofill {
