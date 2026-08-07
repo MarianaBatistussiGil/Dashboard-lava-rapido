@@ -22,23 +22,16 @@ export default function RevenueEbitdaChart() {
 
   const dados = useMemo(
     () =>
-      series.t1.map((_, i) => ({
-        ano: series.t1[i].ano,
-        receitaAsIs: series.asIs[i].receita.total,
-        ebitdaAsIs: series.asIs[i].ebitda,
-        receitaT0: series.t0[i].receita.total,
-        ebitdaT0: series.t0[i].ebitda,
-        receitaT1: series.t1[i].receita.total,
-        ebitdaT1: series.t1[i].ebitda,
+      series.t1.map((anoDado) => ({
+        ano: anoDado.ano,
+        receita: anoDado.receita.total,
+        ebitda: anoDado.ebitda,
       })),
     [series]
   );
 
   return (
-    <Card
-      title="Receita e EBITDA por ano"
-      subtitle="Linha sólida = receita · linha tracejada = EBITDA · três cenários sobrepostos"
-    >
+    <Card title="Receita e EBITDA por ano" subtitle="Linha sólida = receita · linha tracejada = EBITDA">
       <ResponsiveContainer width="100%" height={280}>
         <LineChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />
@@ -50,13 +43,8 @@ export default function RevenueEbitdaChart() {
             <ReferenceLine x={anoAtivacaoMaquina} stroke="#3a3a3a" strokeDasharray="3 3" label={{ value: "Máquina", fill: "#6b6560", fontSize: 10, position: "top" }} />
           )}
 
-          <Line type="monotone" dataKey="receitaAsIs" name="Receita · As-Is" stroke={CENARIO_COR.asIs} strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="receitaT0" name="Receita · T0" stroke={CENARIO_COR.t0} strokeWidth={2} dot={false} />
-          <Line type="monotone" dataKey="receitaT1" name="Receita · T1" stroke={CENARIO_COR.t1} strokeWidth={2} dot={false} />
-
-          <Line type="monotone" dataKey="ebitdaAsIs" name="EBITDA · As-Is" stroke={CENARIO_COR.asIs} strokeWidth={2} strokeDasharray="5 4" dot={false} />
-          <Line type="monotone" dataKey="ebitdaT0" name="EBITDA · T0" stroke={CENARIO_COR.t0} strokeWidth={2} strokeDasharray="5 4" dot={false} />
-          <Line type="monotone" dataKey="ebitdaT1" name="EBITDA · T1" stroke={CENARIO_COR.t1} strokeWidth={2} strokeDasharray="5 4" dot={false} />
+          <Line type="monotone" dataKey="receita" name="Receita" stroke={CENARIO_COR.t1} strokeWidth={2} dot={false} />
+          <Line type="monotone" dataKey="ebitda" name="EBITDA" stroke={CENARIO_COR.t1} strokeWidth={2} strokeDasharray="5 4" dot={false} />
         </LineChart>
       </ResponsiveContainer>
     </Card>

@@ -25,7 +25,7 @@ export default function RevenueByServiceChart() {
   );
 
   return (
-    <Card title="Receita por serviço (T0/T1)" subtitle="O portfólio deslocando a dependência da lavagem completa">
+    <Card title="Receita por serviço" subtitle="O portfólio deslocando a dependência da lavagem completa">
       <ResponsiveContainer width="100%" height={280}>
         <BarChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />

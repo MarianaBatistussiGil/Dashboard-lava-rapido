@@ -21,7 +21,7 @@ export default function SubscriptionVsOneOffChart() {
   );
 
   return (
-    <Card title="Receita avulsa vs. assinatura" subtitle="A previsibilidade que justifica a capacidade instalada (T1)">
+    <Card title="Receita avulsa vs. assinatura" subtitle="A previsibilidade que justifica a capacidade instalada">
       <ResponsiveContainer width="100%" height={260}>
         <BarChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />

@@ -23,7 +23,7 @@ export default function CostCompositionChart() {
   );
 
   return (
-    <Card title="Composição de custos" subtitle="T1 — variáveis, folha, fixos e treinamento ao longo dos anos">
+    <Card title="Composição de custos" subtitle="Variáveis, folha, fixos e treinamento ao longo dos anos">
       <ResponsiveContainer width="100%" height={280}>
         <BarChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
           <CartesianGrid stroke={GRID_COR} vertical={false} />

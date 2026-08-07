@@ -26,3 +26,6 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+
+# ferramentas locais (config de permissões do Claude Code, não é do projeto)
+.claude/

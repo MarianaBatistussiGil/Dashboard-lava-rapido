@@ -13,7 +13,7 @@ export default function FcffChart() {
   const dados = useMemo(() => series.t1.map((a) => ({ ano: a.ano, fcff: a.fcff })), [series]);
 
   return (
-    <Card title="FCFF por ano (T1)" subtitle="Fluxo de caixa livre para a firma, valor terminal destacado à parte">
+    <Card title="FCFF por ano" subtitle="Fluxo de caixa livre para a firma, valor terminal destacado à parte">
       <ResponsiveContainer width="100%" height={240}>
         <AreaChart data={dados} margin={{ top: 4, right: 12, left: 4, bottom: 0 }}>
           <defs>

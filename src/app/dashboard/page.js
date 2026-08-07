@@ -8,7 +8,6 @@ import { estaAutenticado, sair } from "@/lib/auth";
 import { PremissasProvider } from "@/contexts/PremissasContext";
 import SliderPanel from "@/components/dashboard/SliderPanel";
 import KpiRow from "@/components/dashboard/KpiRow";
-import ScenarioLegend from "@/components/dashboard/ScenarioLegend";
 import RevenueEbitdaChart from "@/components/dashboard/charts/RevenueEbitdaChart";
 import RevenueByServiceChart from "@/components/dashboard/charts/RevenueByServiceChart";
 import SubscriptionVsOneOffChart from "@/components/dashboard/charts/SubscriptionVsOneOffChart";
@@ -65,9 +64,6 @@ export default function DashboardPage() {
             </p>
           </div>
           <div className="flex shrink-0 items-center gap-3 sm:gap-5">
-            <div className="hidden md:block">
-              <ScenarioLegend />
-            </div>
             <button
               onClick={() => setPremissasAbertas(true)}
               className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-ink-500 hover:text-white lg:hidden"

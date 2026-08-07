@@ -18,7 +18,7 @@ export default function SensitivityTable() {
   }, [sensibilidade]);
 
   return (
-    <Card title="Sensibilidade — Equity Value" subtitle="Matriz WACC × crescimento na perpetuidade (g), cenário T1">
+    <Card title="Sensibilidade — Equity Value" subtitle="Matriz WACC × crescimento na perpetuidade (g)">
       <div className="overflow-x-auto">
         <table className="w-full border-collapse text-[12px]">
           <thead>

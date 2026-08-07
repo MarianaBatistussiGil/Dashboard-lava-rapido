@@ -12,7 +12,7 @@ const NOME_CARGO = {
   auxAdministrativo: "Auxiliar administrativo",
   atendente: "Atendente",
   lavador: "Lavador (cada)",
-  operadorMaquina: "Operador de máquina (T1)",
+  operadorMaquina: "Operador de máquina",
   contador: "Contador (terceirizado)",
 };
 
@@ -150,7 +150,7 @@ export default function SliderPanel({ onClose }) {
             onChange={(v) => setValor(["operacional", "crescimentoDemandaAnual"], v)}
           />
           <Slider
-            label="Tempo-alvo de lavagem (meta T0)"
+            label="Tempo-alvo de lavagem"
             value={premissas.tempoLavagem.tempoAlvoT0.valor}
             min={premissas.tempoLavagem.tempoAlvoT0.min}
             max={premissas.tempoLavagem.tempoAlvoT0.max}
@@ -167,7 +167,7 @@ export default function SliderPanel({ onClose }) {
             onChange={(v) => setValor(["tempoLavagem", "anosParaAtingirMeta"], v)}
           />
           <Slider
-            label="Boxes manuais (T1)"
+            label="Boxes manuais (após a máquina)"
             value={premissas.operacional.boxesManuais.t1.valor}
             min={premissas.operacional.boxesManuais.t1.min}
             max={premissas.operacional.boxesManuais.t1.max}
@@ -276,8 +276,8 @@ export default function SliderPanel({ onClose }) {
             />
             {anoAtivacaoOverride == null && anoAtivacaoAuto == null && (
               <p className="mt-1.5 text-[11px] text-wine-400">
-                Caixa não cobre o capex dentro do horizonte — T1 fica igual a T0 até
-                aqui. Arraste para forçar uma ativação (ex.: financiada).
+                Caixa não cobre o capex da máquina dentro do horizonte — a operação
+                segue sem ela até aqui. Arraste para forçar uma ativação (ex.: financiada).
               </p>
             )}
           </div>
