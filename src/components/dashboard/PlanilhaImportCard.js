@@ -29,7 +29,7 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
   return (
     <Card
       title="Importar planilha"
-      subtitle="Escolha uma planilha de valuation (.xlsx) para ver o Enterprise Value, Equity Value, WACC e o múltiplo EV/EBITDA lidos direto dela."
+      subtitle="Enquanto carregada, os KPIs abaixo mostram só os números dessa planilha — não o modelo interativo dos sliders."
       action={
         <div className="flex shrink-0 items-center gap-2">
           {importado && (
@@ -37,7 +37,7 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
               onClick={onLimpar}
               className="rounded-lg border border-ink-600 px-3 py-1.5 text-xs font-medium text-ink-300 transition hover:border-wine-500 hover:text-white"
             >
-              Remover
+              Usar modelo interativo
             </button>
           )}
           <button
@@ -51,7 +51,7 @@ export default function PlanilhaImportCard({ importado, onImportar, onLimpar }) 
     >
       <input ref={inputRef} type="file" accept=".xlsx,.xls" className="hidden" onChange={handleArquivo} />
 
-      {!importado && !carregando && <p className="text-sm text-ink-300">Nenhuma planilha carregada ainda.</p>}
+      {!importado && !carregando && <p className="text-sm text-ink-300">Nenhuma planilha carregada — os KPIs abaixo são os do modelo interativo.</p>}
       {importado && <p className="text-sm text-ink-400">Arquivo carregado: <span className="text-ink-200">{importado.nomeArquivo}</span></p>}
       {carregando && <p className="text-sm text-ink-400">Lendo planilha…</p>}
       {erro && <p className="text-sm text-wine-300">{erro}</p>}
